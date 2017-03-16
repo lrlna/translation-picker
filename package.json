@@ -19,5 +19,8 @@
     "fast-json-parse": "^1.0.2",
     "fast-safe-stringify": "^1.1.11",
     "to-buffer": "^1.0.1"
+  },
+  "devDependencies": {
+    "standard": "^9.0.1"
   }
 }
