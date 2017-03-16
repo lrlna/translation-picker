@@ -33,7 +33,7 @@ var translate = translationPicker({
   default: 'ar'
 })
 
-translate.pick('subject', 'ku') //بابەت
+translate('subject', 'ku') //بابەت
 ```
 
 ### var translate = translationPicker(opts)
