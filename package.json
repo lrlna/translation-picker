@@ -1,6 +1,6 @@
 {
   "name": "translation-picker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "switch between different translations of a term",
   "main": "index.js",
   "scripts": {
