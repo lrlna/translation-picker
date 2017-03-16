@@ -11,6 +11,10 @@ module.exports = function translate (opts) {
   assert.ok(Buffer.isBuffer(translations) || typeof translations === 'object', 'translation-picker: translations should be type Object or instanceof Buffer')
   assert.ok(typeof def === 'string', 'translation-picker: default language should be type string')
 
+  if (typeof translations === 'object' && !Buffer.isBuffer(translations)) {
+    translations = stringify(translations)
+  }
+
   if (Buffer.isBuffer(translations) || typeof translations === 'string') {
     var buf = toBuffer(translations)
     var json = jsonParse(buf)
@@ -20,12 +24,8 @@ module.exports = function translate (opts) {
     translations = json.value
   }
 
-  if (typeof translations === 'object') translations = stringify(translations)
-
-  return {
-    pick: function (term, lang) {
-      lang = lang || def
-      return translations[lang][term] || ''
-    }
+  return function (term, lang) {
+    lang = lang || def
+    return translations[lang][term] || ''
   }
 }
