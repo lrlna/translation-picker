@@ -1,0 +1,23 @@
+{
+  "name": "translation-picker",
+  "version": "1.0.0",
+  "description": "switch between different translations of a term",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "keywords": [
+    "translation",
+    "picker",
+    "languages"
+  ],
+  "repository": "lrlna/translation-picker",
+  "author": "Irina Shestak",
+  "license": "MIT",
+  "dependencies": {
+    "explain-error": "^1.0.3",
+    "fast-json-parse": "^1.0.2",
+    "fast-safe-stringify": "^1.1.11",
+    "to-buffer": "^1.0.1"
+  }
+}
